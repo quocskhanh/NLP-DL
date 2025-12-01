@@ -72,4 +72,12 @@ Chạy script dưới dạng module từ thư mục gốc của dự án (python
 
 Vấn đề: Quy trình Git khi đẩy code lên repository đã có sẵn
 
-Khó khăn: Repository trên GitHub đã có sẵn nội dung và nhánh master, tronGemini
+Khó khăn: Repository trên GitHub đã có sẵn nội dung và nhánh master, trong khi local lại đang phát triển trên nhánh main. Việc push trực tiếp gây ra lỗi.
+
+Giải pháp: Sử dụng lệnh git pull origin master --allow-unrelated-histories để hợp nhất hai lịch sử commit không liên quan. Sau đó, thực hiện add, commit và push các thay đổi mới lên nhánh master.
+
+Vấn đề: Cảnh báo winutils.exe khi chạy PySpark trên Windows
+
+Khó khăn: PySpark hiển thị cảnh báo về việc không tìm thấy winutils.exe.
+
+Giải pháp: Đây là một cảnh báo phổ biến và vô hại khi chạy Spark ở chế độ local. Đối với mục đích của bài lab, giải pháp đơn giản là bỏ qua cảnh báo này. Để giải quyết triệt để, cần tải winutils.exe và thiết lập biến môi trường HADOOP_HOME.
